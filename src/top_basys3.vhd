@@ -96,15 +96,9 @@ begin
 	seven : sevenseg_decoder
 	port map(
 	   i_Hex =>sw,
-	   o_seg_n => seg
+	   o_seg_n => w_seg_in
 	   );
-	seg <= w_seg_in(6) &
-	w_seg_in(5) &
-	w_seg_in(4) &
-	w_seg_in(3) &
-	w_seg_in(2) &
-	w_seg_in(1) &
-	w_seg_in(0);
+	seg <= w_seg_in;
 	-- CONCURRENT STATEMENTS ----------------------------
 	
 	-- wire up active-low 7SD anode (active low) to button (active-high)
