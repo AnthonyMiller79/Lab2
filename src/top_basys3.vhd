@@ -96,7 +96,7 @@ begin
 	seven : sevenseg_decoder
 	port map(
 	   i_Hex =>sw,
-	   o_seg_n => w_seg_in
+	   o_seg_n => seg
 	   );
 	seg <= w_seg_in(6) &
 	w_seg_in(5) &
