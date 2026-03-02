@@ -47,7 +47,7 @@ architecture Behavioral of sevenseg_decoder is
               "0000010" when i_Hex = "0110" else
               "1111000" when i_Hex = "0111" else
               "0000000" when i_Hex = "1000" else
-              "0001000" when i_Hex = "1001" else
+              "0010000" when i_Hex = "1001" else
               "0001000" when i_Hex = "1010" else
               "0000011" when i_Hex = "1011" else
               "1000110" when i_Hex = "1100" else
