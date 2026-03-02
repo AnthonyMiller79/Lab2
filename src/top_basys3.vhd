@@ -86,6 +86,7 @@ end component;
 
   -- create wire to connect button to 7SD enable (active-low)
        signal  w_7SD_EN_n :std_logic;
+       signal w_seg_in : std_logic_vector(6 downto 0);
   
 begin
 	-- PORT MAPS ----------------------------------------
@@ -95,9 +96,15 @@ begin
 	seven : sevenseg_decoder
 	port map(
 	   i_Hex =>sw,
-	   o_seg_n => seg
+	   o_seg_n => w_seg_in
 	   );
-	
+	seg <= w_seg_in(0) &
+	w_seg_in(1) &
+	w_seg_in(2) &
+	w_seg_in(3) &
+	w_seg_in(4) &
+	w_seg_in(5) &
+	w_seg_in(6);
 	-- CONCURRENT STATEMENTS ----------------------------
 	
 	-- wire up active-low 7SD anode (active low) to button (active-high)
