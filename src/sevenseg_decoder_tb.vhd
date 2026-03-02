@@ -86,7 +86,7 @@ begin
     assert w_seg = "0000011" report "error on B" severity failure;
     
     w_hex <= x"C"; wait for 10 ns;
-    assert w_seg = "1000110" report "error on C" severity failure;
+    assert w_seg = "1000111" report "error on C" severity failure;
     
     w_hex <= x"D"; wait for 10 ns;
     assert w_seg = "0100001" report "error on D" severity failure;
